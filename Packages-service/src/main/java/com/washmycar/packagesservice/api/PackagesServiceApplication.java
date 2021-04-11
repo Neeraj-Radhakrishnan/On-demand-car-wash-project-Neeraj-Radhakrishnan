@@ -11,7 +11,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 
 
-@OpenAPIDefinition(info=@Info(title="HMS - Inventory Management Service", version="1.0",description="Inventory Management Service"))
+@OpenAPIDefinition(info=@Info(title="Wash My Car Application", version="1.0",description="Service-Packages microservice"))
 @EnableSwagger2
 @SpringBootApplication
 public class PackagesServiceApplication {

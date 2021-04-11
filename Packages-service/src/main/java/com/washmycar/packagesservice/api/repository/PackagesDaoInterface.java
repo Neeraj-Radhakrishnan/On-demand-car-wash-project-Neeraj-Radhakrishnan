@@ -1,9 +1,9 @@
-package com.washmycar.packagesservice.repository;
+package com.washmycar.packagesservice.api.repository;
 
 import java.util.List;
 import java.util.Optional;
 
-import com.washmycar.packagesservice.model.Package;
+import com.washmycar.packagesservice.api.model.Package;
 
 public interface PackagesDaoInterface {
 	

@@ -1,4 +1,4 @@
-package com.washmycar.packagesservice.repository;
+package com.washmycar.packagesservice.api.repository;
 
 
 
@@ -8,7 +8,7 @@ import java.util.Optional;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-import com.washmycar.packagesservice.model.Package;
+import com.washmycar.packagesservice.api.model.Package;
 
 @Repository
 public interface PackagesRepository extends MongoRepository<Package, String> {

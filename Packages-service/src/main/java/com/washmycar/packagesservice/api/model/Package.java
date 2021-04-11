@@ -1,7 +1,7 @@
-package com.washmycar.packagesservice.model;
+package com.washmycar.packagesservice.api.model;
 
 import org.springframework.data.annotation.Id;
-
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 
@@ -10,6 +10,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Package {
 	
 	@Id
+	private String id;
+	@Indexed(unique = true)
 	private String packageCode;
 	private String carType;
 	private String packageType;

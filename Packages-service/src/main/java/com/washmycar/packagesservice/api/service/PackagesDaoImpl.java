@@ -1,13 +1,14 @@
-package com.washmycar.packagesservice.service;
+package com.washmycar.packagesservice.api.service;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.washmycar.packagesservice.model.Package;
-import com.washmycar.packagesservice.repository.PackagesDaoInterface;
-import com.washmycar.packagesservice.repository.PackagesRepository;
+
+import com.washmycar.packagesservice.api.model.Package;
+import com.washmycar.packagesservice.api.repository.PackagesDaoInterface;
+import com.washmycar.packagesservice.api.repository.PackagesRepository;
 
 
 @Service
@@ -40,7 +41,7 @@ public class PackagesDaoImpl implements PackagesDaoInterface {
 	public Package updatePackagebyPackageCode(String packageCode, Package packages) {
 		Optional<Package> packages1 = packagesRepository.findByPackageCode(packageCode);
 		Package updatePackage =packages1.get();
-		updatePackage.setPackageCode(packages.getPackageCode());
+		//updatePackage.setPackageCode(packages.getPackageCode());
 		updatePackage.setCarType(packages.getCarType());
 		updatePackage.setDescription(packages.getDescription());
 		updatePackage.setPackageType(packages.getPackageType());
@@ -59,13 +60,13 @@ public class PackagesDaoImpl implements PackagesDaoInterface {
 	@Override
 	public String deletePackagebyPackageCode(String packageCode) {
 		packagesRepository.deleteByPackageCode(packageCode);
-		return null;
+		return packageCode;
 	}
 
 	@Override
 	public String deletePackagebyCarType(String carType) {
 		packagesRepository.deleteByCarType(carType);
-		return null;
+		return carType;
 	}
 
 }

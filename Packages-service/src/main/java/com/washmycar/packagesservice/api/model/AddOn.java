@@ -1,4 +1,4 @@
-package com.washmycar.packagesservice.model;
+package com.washmycar.packagesservice.api.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
@@ -14,7 +14,8 @@ public class AddOn {
 	
 	
 	@Id
-	@Indexed(unique = true )
+	private String id;
+	@Indexed(unique = true)
 	private String addOnCode;
 	private String addOnName;
 	private int price;
