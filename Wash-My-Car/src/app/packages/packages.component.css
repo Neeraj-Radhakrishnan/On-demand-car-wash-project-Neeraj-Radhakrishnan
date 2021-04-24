@@ -1,0 +1,35 @@
+.package
+{
+    background-color: rgb(216, 210, 210);
+    padding: 50px 100px;
+}
+.box 
+{
+    margin-left: 30px;
+    background-color: white;
+    padding: 10px 20px ;
+    width: 250px;
+    height: 600px;
+}
+.row
+{
+    margin-left: 90px;
+}
+@media screen and (max-width:600px) {
+    .package
+{
+    background-color: rgb(216, 210, 210);
+    padding: 20px 10px;
+}
+.row
+{
+    margin-left: 5px;
+}
+.box 
+{
+    margin-top: 30px;
+    width: 300px;
+    
+}
+    
+}
